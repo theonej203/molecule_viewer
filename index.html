@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Molecule Viewer </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+  </head>
+  <body>
+    <h1 class="title"> Main menu </h1>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="molViewer.html">View Molecules</a></li>
+    </ul>
+    <br/><br/><br/><br/><br/>
+    <div class="mainMenu">
+      <form action="molecule" class="menuElement" enctype="multipart/form-data" method="post">
+        <h3>Choose an SDF file to upload</h3>
+        <p>
+          <input type="file" id="sdf_file" name="filename"/>
+        </p>
+        <p>
+          <label >New molecule name:</label>
+          <input type="text" id="sdf_name" name="moleculename"/>
+        </p>
+        <p>
+          <input type="submit" value="Upload"/>
+        </p>
+      </form>
+      <div class="menuElement">
+        <h3>Enter new element data</h3>
+        <ul id="formParent">
+          <li>
+            <label >Element number:</label>
+            <input type="text" id="eNum" />
+          </li><br><br>
+          <li>
+            <label>Element Code:</label>
+            <input type="text" id="eCode"/>
+          </li><br><br>
+          <li>
+            <label>Element name:</label>
+            <input type="text" id="eName"/>
+          </li><br><br>
+          <li>
+            <label>Color 1:</label>
+            <input type="text" id="eCol1"/>
+          </li><br><br>
+          <li>
+            <label>Color 2:</label>
+            <input type="text" id="eCol2"/>
+          </li><br><br>
+          <li>
+            <label>Color 3:</label>
+            <input type="text" id="eCol3"/>
+          </li><br><br>
+          <li>
+            <label>Element radius:</label>
+            <input type="text" id="eRad"/>
+          </li><br><br>
+          <button id="eButton">Enter</button>
+        </ul>
+      </div>
+      <div class="menuElement large">
+        <h3>Existing elements:</h3>
+        <div id="elementList">
+
+        </div>
+      </div>
+      
+    </div>
+    
+  </body>
+</html>
